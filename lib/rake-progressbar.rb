@@ -70,9 +70,9 @@ class RakeProgressbar
       end
       STDOUT.print "\n"
       if show_actual
-        STDOUT.print "Finished #{self.actual} in #{Time.now - self.started}s\n"
+        STDOUT.print "Finished #{self.actual} in #{(Time.now - self.started).round(2)} seconds\n"
       else
-        STDOUT.print "Finished in #{Time.now - self.started}s\n"
+        STDOUT.print "Finished in #{(Time.now - self.started).round(2)} seconds\n"
       end
       STDOUT.flush
       self.finish = true
